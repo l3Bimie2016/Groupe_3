@@ -1,5 +1,6 @@
 package fr.imie.groupe3.project;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -16,5 +17,9 @@ public class JavaProjetGroup3Application extends SpringBootServletInitializer {
         return springApplicationBuilder.sources(JavaProjetGroup3Application.class);
     }
 
-
+    /*
+    public static void main(String[] args) {
+        SpringApplication.run(JavaProjetGroup3Application.class);
+    }
+    */
 }

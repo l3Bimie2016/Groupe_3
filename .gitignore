@@ -2,3 +2,6 @@ Groupe3ImieProject.iml
 .idea/
 .mvn/
 out/
+target/
+*.iml
+lib
