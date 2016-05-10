@@ -13,12 +13,13 @@
 <body>
 <form method="post" action="/habitationWizard4">
 
-    Surface du terrain : <input type="number" name="SurfaceTerrain" value="Y" required="required"/><br>
-    Surface de la terrasse : <input type="number" name="SurfaceTerrasse" value="Y" required="required"/><br>
-    Type de chauffage : <input type="text" name="TypeChauffage" value="Y" required="required"/><br>
+    Surface du terrain : <input type="number" name="surfaceTerrain" value="0" required="required"/><br>
+    Surface de la terrasse : <input type="number" name="surfaceTerrasse" value="0" required="required"/><br>
+    Type de chauffage : <input type="text" name="typeChauffage" value="Gaz" required="required"/><br><br>
 
-    <input type="submit" name="Valider">
-    <input type="reset" name="Supprimer">
+    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <input type="submit" name="Continuer" value="Continuer">
+    <input type="reset" name="Supprimer" value="Effacer">
 
 </form>
 </body>

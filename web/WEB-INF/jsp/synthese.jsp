@@ -12,10 +12,5 @@
 </head>
 <body>
 <a href="/habitationWizard1">Nouveau devis d'habitation</a>
-    <jsp:include page="habitationWizard1.jsp"/>
-    <jsp:include page="habitationWizard2.jsp"/>
-    <jsp:include page="habitationWizard3.jsp"/>
-    <jsp:include page="habitationWizard4.jsp"/>
-
 </body>
 </html>

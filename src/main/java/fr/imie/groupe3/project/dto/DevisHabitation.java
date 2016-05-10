@@ -12,12 +12,11 @@ public class DevisHabitation {
     private Integer surface;
     private Integer nombrePiece;
     private Integer etage;
-    private Integer nombreSalleBain;
+    private Integer nombreSalleDeBain;
     private Integer garage;
     private Integer surfaceTerrain;
-    private Integer surfaceTerasse;
+    private Integer surfaceTerrasse;
     private String typeChauffage;
-    private String resume;
     private String formule1;
     private String formule2;
     private Integer prix;
@@ -78,12 +77,12 @@ public class DevisHabitation {
         this.etage = etage;
     }
 
-    public Integer getNombreSalleBain() {
-        return nombreSalleBain;
+    public Integer getNombreSalleDeBain() {
+        return nombreSalleDeBain;
     }
 
-    public void setNombreSalleBain(Integer nombreSalleBain) {
-        this.nombreSalleBain = nombreSalleBain;
+    public void setNombreSalleDeBain(Integer nombreSalleDeBain) {
+        this.nombreSalleDeBain = nombreSalleDeBain;
     }
 
     public Integer getGarage() {
@@ -102,12 +101,12 @@ public class DevisHabitation {
         this.surfaceTerrain = surfaceTerrain;
     }
 
-    public Integer getSurfaceTerasse() {
-        return surfaceTerasse;
+    public Integer getSurfaceTerrasse() {
+        return surfaceTerrasse;
     }
 
-    public void setSurfaceTerasse(Integer surfaceTerasse) {
-        this.surfaceTerasse = surfaceTerasse;
+    public void setSurfaceTerrasse(Integer surfaceTerrasse) {
+        this.surfaceTerrasse = surfaceTerrasse;
     }
 
     public String getTypeChauffage() {
@@ -116,14 +115,6 @@ public class DevisHabitation {
 
     public void setTypeChauffage(String typeChauffage) {
         this.typeChauffage = typeChauffage;
-    }
-
-    public String getResume() {
-        return resume;
-    }
-
-    public void setResume(String resume) {
-        this.resume = resume;
     }
 
     public String getFormule1() {

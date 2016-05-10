@@ -13,14 +13,15 @@
 <body>
 <form method="post" action="/habitationWizard2">
 
-    Nom : <input type="text" name="Nom" value="X" disabled="disabled"/>
-    Prenom : <input type="text" name="Prenom" value="Y" disabled="disabled"/></br>
-    Nom du Devis : <input type="text" name="NomDevis" value="Devis" required="required"/></br>
-    d'Habitation : <input type="text" name="TypeHabitation" value="Devis" required="required"/></br>
-    Surface : <input type="number" name="Surface" value="Devis" required="required"/></br>
+    Nom : <input type="text" name="Nom" value="Nom" readonly/>
+    Prenom : <input type="text" name="Prenom" value="Prenom" readonly/><br>
+    Nom du Devis : <input type="text" name="NomDevis" value="Devis" required="required"/><br>
+    Type d'Habitation : <input type="text" name="TypeHabitation" value="Devis" required="required"/><br>
+    Surface : <input type="number" name="Surface" value="0" required="required"/><br><br>
 
-    <input type="submit" name="Valider">
-    <input type="reset" name="Supprimer">
+    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <input type="submit" name="Continuer" value="Continuer">
+    <input type="reset" name="Supprimer" value="Effacer">
 
 </form>
 </body>

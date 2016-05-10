@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%--
   Created by IntelliJ IDEA.
   User: le1cool
@@ -6,6 +8,8 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="fr.imie.groupe3.project.dto.DevisHabitation" %>
+<%@ page import="java.lang.reflect.Field" %>
 <html>
 <head>
     <title>Devis Habitation Part.4</title>
@@ -13,13 +17,26 @@
 <body>
 <form method="post" action="/habitationWizardSave">
 
-    Resume : <input type="text" name="Resume" value="Y"/>
-    Formule 1 : <input type="checkbox" name="Formule1" value="Y"/>
-    Formule 2 :<input type="checkbox" name="Formule2" value="Y"/>
-    Prix : <input type="number" name="Prix" value="Y"/>
+    Resumé :
+    <center>
+        <table width="50%" border="1">
+            <c:forEach var="quote" items="${resumes}">
+                <tr>
+                    <td><c:out value="${quote.name}"/></td>
+                    <td><c:out value="${quote.value}"/></td>
+                </tr>
+            </c:forEach>
+        </table>
+    </center>
 
-    <input type="submit" name="Valider">
-    <input type="reset" name="Supprimer">
+    <input type="radio" name="Formule" onClick="document.getElementById('Prix').value='42'" required> Formule 1<br>
+    <input type="radio" name="Formule" onClick="document.getElementById('Prix').value='10'" required> Formule 2<br>
+
+    Prix : <input type="text" name="Prix" id="Prix" readonly/><br><br>
+
+    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <input type="submit" name="Continuer" value="Continuer">
+    <input type="reset" name="Supprimer" value="Effacer">
 
 </form>
 </body>
