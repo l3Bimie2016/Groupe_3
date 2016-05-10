@@ -19,20 +19,21 @@ import java.util.List;
  * Created by le1cool on 09/05/16.
  */
 @Controller
-@SessionAttributes({"devisHabitation"})
+@SessionAttributes("devisHabitation")
 public class DevisHabitationController {
+
 
     @Autowired
     private DevisHabitationService devisHabitationService;
 
-    @RequestMapping("/habitationWizard1")
+    @RequestMapping("/habitationWizard")
     public ModelAndView habitationwWizard() {
         return new ModelAndView("habitationWizard1","devisHabitation", new DevisHabitation());
     }
 
     @RequestMapping("/habitationWizard{nbr}")
     public ModelAndView habitationwWizard(@PathVariable("nbr") int nbr, @ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
-
+        devisHabitationService.setDevisHabitation(devisHabitation);
         if (nbr == 4){
         List<Tuple> listes = new ArrayList<>();
             Field[] fields = DevisHabitation.class.getDeclaredFields();
@@ -55,11 +56,12 @@ public class DevisHabitationController {
     }
 
     @RequestMapping("/habitationWizardSave")
-    public String habitationwWizardSave(@PathVariable("nbr") int nbr, @ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
-        Integer result = null;
+    public String habitationwWizardSave(@ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
+        String result = null;
         result = devisHabitationService.sendDevisHabitationToVertX(devisHabitation);
         String message = null;
-        if(result == 1){
+        if(result.equals("1")){
+            devisHabitationService.deleteDevisHabitation(devisHabitation);
             message = "Ok";
         }else {
             message = "Error";

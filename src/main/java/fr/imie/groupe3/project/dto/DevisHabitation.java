@@ -1,21 +1,34 @@
 package fr.imie.groupe3.project.dto;
 
+import javax.persistence.*;
+
 /**
  * Created by Axel on 09/05/2016.
  */
+@Entity
 public class DevisHabitation {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Integer id;
     private String nom;
     private String prenom;
+    @Column(name="nom_devis")
     private String nomDevis;
+    @Column(name="type_habitation")
     private String typeHabitation;
     private Integer surface;
+    @Column(name="nombre_piece")
     private Integer nombrePiece;
     private Integer etage;
+    @Column(name="nombre_salle_bain")
     private Integer nombreSalleDeBain;
     private Integer garage;
+    @Column(name="surface_terrain")
     private Integer surfaceTerrain;
     private Integer surfaceTerrasse;
+    @Column(name="surface_terasse")
+    @Column(name="type_chauffage")
     private String typeChauffage;
     private String formule1;
     private String formule2;
