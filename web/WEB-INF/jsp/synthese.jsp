@@ -11,6 +11,10 @@
     <title>Synthese</title>
 </head>
 <body>
+    <jsp:include page="habitationWizard1.jsp"/>
+    <jsp:include page="habitationWizard2.jsp"/>
+    <jsp:include page="habitationWizard3.jsp"/>
+    <jsp:include page="habitationWizard4.jsp"/>
 
 </body>
 </html>

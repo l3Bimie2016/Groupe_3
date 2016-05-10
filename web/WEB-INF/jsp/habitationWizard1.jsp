@@ -15,6 +15,7 @@
 
         <input type="text" name="Nom" value="X" disabled="disabled"/>
         <input type="text" name="Prenom" value="Y" disabled="disabled"/>
+
         <input type="text" name="NomDevis" value="Devis" required="required"/>
         <input type="text" name="TypeHabitation" value="Devis" required="required"/>
         <input type="number" name="Surface" value="Devis" required="required"/>

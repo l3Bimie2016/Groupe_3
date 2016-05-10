@@ -16,6 +16,11 @@
     <input type="text" name="Nom" value="X" disabled="disabled"/>
     <input type="text" name="Prenom" value="Y" disabled="disabled"/>
 
+    <input type="number" name="NbPieces" value="Y" required="required"/>
+    <input type="number" name="Etage" value="Y" required="required"/>
+    <input type="number" name="NbSalleDeBain" value="Y" required="required"/>
+    <input type="checkbox" name="Garage" value="Y" required="required"/>
+
     <input type="submit" name="Valider">
     <input type="reset" name="Supprimer">
 

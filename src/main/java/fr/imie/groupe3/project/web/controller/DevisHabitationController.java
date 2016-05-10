@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class DevisHabitationController {
 
-
     @RequestMapping("/habitationWizard{nbr}")
     public String habitationwWizardStart(@PathVariable("nbr") int nbr) {
         System.out.println(nbr);
