@@ -11,18 +11,17 @@
     <title>Devis Habitation Part.1</title>
 </head>
 <body>
-    <form method="post" action="/habitationWizard2">
+<form method="post" action="/habitationWizard2">
 
-        <input type="text" name="Nom" value="X" disabled="disabled"/>
-        <input type="text" name="Prenom" value="Y" disabled="disabled"/>
+    Nom : <input type="text" name="Nom" value="X" disabled="disabled"/>
+    Prenom : <input type="text" name="Prenom" value="Y" disabled="disabled"/></br>
+    Nom du Devis : <input type="text" name="NomDevis" value="Devis" required="required"/></br>
+    d'Habitation : <input type="text" name="TypeHabitation" value="Devis" required="required"/></br>
+    Surface : <input type="number" name="Surface" value="Devis" required="required"/></br>
 
-        <input type="text" name="NomDevis" value="Devis" required="required"/>
-        <input type="text" name="TypeHabitation" value="Devis" required="required"/>
-        <input type="number" name="Surface" value="Devis" required="required"/>
+    <input type="submit" name="Valider">
+    <input type="reset" name="Supprimer">
 
-        <input type="submit" name="Valider">
-        <input type="reset" name="Supprimer">
-
-    </form>
+</form>
 </body>
 </html>

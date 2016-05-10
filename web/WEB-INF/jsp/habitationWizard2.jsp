@@ -13,13 +13,10 @@
 <body>
 <form method="post" action="/habitationWizard3">
 
-    <input type="text" name="Nom" value="X" disabled="disabled"/>
-    <input type="text" name="Prenom" value="Y" disabled="disabled"/>
-
-    <input type="number" name="NbPieces" value="Y" required="required"/>
-    <input type="number" name="Etage" value="Y" required="required"/>
-    <input type="number" name="NbSalleDeBain" value="Y" required="required"/>
-    <input type="checkbox" name="Garage" value="Y" required="required"/>
+    Nombre de pièces : <input type="number" name="NbPieces" value="Y" required="required"/><br>
+    Nombre d'étages : <input type="number" name="Etage" value="Y" required="required"/><br>
+    Nombre de salle de bain : <input type="number" name="NbSalleDeBain" value="Y" required="required"/><br>
+    Garage : <input type="checkbox" name="Garage" value="Y"/>
 
     <input type="submit" name="Valider">
     <input type="reset" name="Supprimer">

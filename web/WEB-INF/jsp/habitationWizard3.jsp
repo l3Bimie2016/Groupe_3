@@ -13,12 +13,9 @@
 <body>
 <form method="post" action="/habitationWizard4">
 
-    <input type="text" name="Nom" value="X" disabled="disabled"/>
-    <input type="text" name="Prenom" value="Y" disabled="disabled"/>
-
-    <input type="number" name="SurfaceTerrain" value="Y" required="required"/>
-    <input type="number" name="SurfaceTerrasse" value="Y" required="required"/>
-    <input type="text" name="TypeChauffage" value="Y" required="required"/>
+    Surface du terrain : <input type="number" name="SurfaceTerrain" value="Y" required="required"/><br>
+    Surface de la terrasse : <input type="number" name="SurfaceTerrasse" value="Y" required="required"/><br>
+    Type de chauffage : <input type="text" name="TypeChauffage" value="Y" required="required"/><br>
 
     <input type="submit" name="Valider">
     <input type="reset" name="Supprimer">
