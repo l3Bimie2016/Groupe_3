@@ -12,7 +12,7 @@ public class LoginController {
 
     @RequestMapping("/")
     public String index() {
-        return "login";
+        return "synthese";
     }
 
     @RequestMapping(value = "/authentification", method = RequestMethod.POST)
