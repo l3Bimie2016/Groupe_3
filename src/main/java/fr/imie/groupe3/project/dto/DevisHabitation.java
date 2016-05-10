@@ -9,18 +9,18 @@ public class DevisHabitation {
     private String prenom;
     private String nomDevis;
     private String typeHabitation;
-    private String surface;
-    private String nombrePiece;
-    private String etage;
-    private String nombreSalleBain;
-    private String garage;
-    private String surfaceTerrain;
-    private String surfaceTerasse;
+    private Integer surface;
+    private Integer nombrePiece;
+    private Integer etage;
+    private Integer nombreSalleBain;
+    private Integer garage;
+    private Integer surfaceTerrain;
+    private Integer surfaceTerasse;
     private String typeChauffage;
     private String resume;
     private String formule1;
     private String formule2;
-    private String prix;
+    private Integer prix;
 
     public String getNom() {
         return nom;
@@ -54,59 +54,59 @@ public class DevisHabitation {
         this.typeHabitation = typeHabitation;
     }
 
-    public String getSurface() {
+    public Integer getSurface() {
         return surface;
     }
 
-    public void setSurface(String surface) {
+    public void setSurface(Integer surface) {
         this.surface = surface;
     }
 
-    public String getNombrePiece() {
+    public Integer getNombrePiece() {
         return nombrePiece;
     }
 
-    public void setNombrePiece(String nombrePiece) {
+    public void setNombrePiece(Integer nombrePiece) {
         this.nombrePiece = nombrePiece;
     }
 
-    public String getEtage() {
+    public Integer getEtage() {
         return etage;
     }
 
-    public void setEtage(String etage) {
+    public void setEtage(Integer etage) {
         this.etage = etage;
     }
 
-    public String getNombreSalleBain() {
+    public Integer getNombreSalleBain() {
         return nombreSalleBain;
     }
 
-    public void setNombreSalleBain(String nombreSalleBain) {
+    public void setNombreSalleBain(Integer nombreSalleBain) {
         this.nombreSalleBain = nombreSalleBain;
     }
 
-    public String getGarage() {
+    public Integer getGarage() {
         return garage;
     }
 
-    public void setGarage(String garage) {
+    public void setGarage(Integer garage) {
         this.garage = garage;
     }
 
-    public String getSurfaceTerrain() {
+    public Integer getSurfaceTerrain() {
         return surfaceTerrain;
     }
 
-    public void setSurfaceTerrain(String surfaceTerrain) {
+    public void setSurfaceTerrain(Integer surfaceTerrain) {
         this.surfaceTerrain = surfaceTerrain;
     }
 
-    public String getSurfaceTerasse() {
+    public Integer getSurfaceTerasse() {
         return surfaceTerasse;
     }
 
-    public void setSurfaceTerasse(String surfaceTerasse) {
+    public void setSurfaceTerasse(Integer surfaceTerasse) {
         this.surfaceTerasse = surfaceTerasse;
     }
 
@@ -142,11 +142,11 @@ public class DevisHabitation {
         this.formule2 = formule2;
     }
 
-    public String getPrix() {
+    public Integer getPrix() {
         return prix;
     }
 
-    public void setPrix(String prix) {
+    public void setPrix(Integer prix) {
         this.prix = prix;
     }
 }

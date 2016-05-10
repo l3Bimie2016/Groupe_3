@@ -11,7 +11,7 @@
     <title>Devis Habitation Part.4</title>
 </head>
 <body>
-<form method="post" action="/synthese">
+<form method="post" action="/habitationWizardSave">
 
     <input type="text" name="Nom" value="X" disabled="disabled"/>
     <input type="text" name="Prenom" value="Y" disabled="disabled"/>
