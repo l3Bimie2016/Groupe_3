@@ -3,16 +3,16 @@ package fr.imie.groupe3.project.dto;
 /**
  * Created by le1cool on 10/05/16.
  */
-public class Tuple {
+public class TupleNameValue {
     private String name;
     private String value;
 
-    public Tuple(String name, String value) {
+    public TupleNameValue(String name, String value) {
         this.name = name;
         this.value = value;
     }
 
-    public Tuple(String name, Object value) {
+    public TupleNameValue(String name, Object value) {
         this.name = name;
         this.value = (value != null)?value.toString():"";
     }

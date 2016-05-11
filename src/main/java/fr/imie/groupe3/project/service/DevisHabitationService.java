@@ -2,14 +2,18 @@ package fr.imie.groupe3.project.service;
 
 import fr.imie.groupe3.project.dao.DevisHabitationDao;
 import fr.imie.groupe3.project.dto.DevisHabitation;
-import fr.imie.groupe3.project.dto.Tuple;
+import fr.imie.groupe3.project.dto.TupleNameValue;
 import org.apache.commons.collections.IteratorUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -35,7 +39,8 @@ public class DevisHabitationService {
 
         RestTemplate restTemplate = new RestTemplate();
         String url = "http://localhost:8080/devisHabitation";
-        return restTemplate.getForObject(url, List.class);
+        ResponseEntity<List<DevisHabitation>> responseEntity = restTemplate.exchange(url, HttpMethod.GET, null, new ParameterizedTypeReference<List<DevisHabitation>>(){});
+        return Arrays.asList(responseEntity.getBody());
     }
 
     public void setDevisHabitation(DevisHabitation devisHabitation) {
@@ -46,12 +51,12 @@ public class DevisHabitationService {
         devisHabitationDao.delete(devisHabitation);
     }
 
-    public List getListDevisHabitation(){
+    public List getListDevisHabitation() {
         return IteratorUtils.toList(devisHabitationDao.findAll().iterator());
     }
 
     public List getResume(DevisHabitation devisHabitation) {
-        List<Tuple> listes = new ArrayList<>();
+        List<TupleNameValue> listes = new ArrayList<>();
         Field[] fields = DevisHabitation.class.getDeclaredFields();
         for (Field f : fields) {
             try {
@@ -59,7 +64,7 @@ public class DevisHabitationService {
                 if (f.getName().equals("prix") || f.getName().equals("formule1") || f.getName().equals("formule2")) {
                     System.out.println(f.getName());
                 } else {
-                    listes.add(new Tuple(f.getName(), f.get(devisHabitation)));
+                    listes.add(new TupleNameValue(f.getName(), f.get(devisHabitation)));
                 }
             } catch (IllegalAccessException e) {
                 e.printStackTrace();

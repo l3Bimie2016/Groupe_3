@@ -34,7 +34,7 @@
 
     Prix : <input type="text" name="Prix" id="Prix" readonly/><br><br>
 
-    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <a href="/"><input type="button" value="Quitter"></a>
     <input type="submit" name="Continuer" value="Continuer">
     <input type="reset" name="Supprimer" value="Effacer">
 

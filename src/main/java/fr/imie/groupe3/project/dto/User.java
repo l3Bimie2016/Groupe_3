@@ -1,7 +1,7 @@
 package fr.imie.groupe3.project.dto;
 
 /**
- * Created by luffy on 05/04/16.
+ * Created by axel on 05/04/16.
  */
 public class User {
 

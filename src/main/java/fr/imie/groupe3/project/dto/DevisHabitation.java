@@ -1,6 +1,7 @@
 package fr.imie.groupe3.project.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
 
@@ -14,27 +15,44 @@ public class DevisHabitation {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @JsonIgnore
     private Integer id;
+    @JsonProperty("id_devis_habitations")
+    private Integer idDevisHabitations;
     private String nom;
     private String prenom;
     @Column(name="nom_devis")
+    @JsonProperty("nom_devis")
     private String nomDevis;
+    @JsonProperty("type_habitation")
     @Column(name="type_habitation")
     private String typeHabitation;
     private Integer surface;
     @Column(name="nombre_piece")
+    @JsonProperty("nombre_piece")
     private Integer nombrePiece;
     private Integer etage;
+    @JsonProperty("nombre_salle_bain")
     @Column(name="nombre_salle_bain")
     private Integer nombreSalleBain;
     private Integer garage;
     @Column(name="surface_terrain")
+    @JsonProperty("surface_terrain")
     private Integer surfaceTerrain;
+    @JsonProperty("surface_terrasse")
     @Column(name="surface_terrasse")
     private Integer surfaceTerrasse;
     @Column(name="type_chauffage")
+    @JsonProperty("type_chauffage")
     private String typeChauffage;
     private String formule;
     private Integer prix;
+
+    public Integer getIdDevisHabitations() {
+        return idDevisHabitations;
+    }
+
+    public void setIdDevisHabitations(Integer idDevisHabitations) {
+        this.idDevisHabitations = idDevisHabitations;
+    }
 
     public String getNom() {
         return nom;

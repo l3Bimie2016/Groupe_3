@@ -19,7 +19,7 @@
     Type d'Habitation : <input type="text" name="TypeHabitation" value="Devis" required="required"/><br>
     Surface : <input type="number" name="Surface" value="0" required="required"/><br><br>
 
-    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <a href="/"><input type="button" value="Quitter"></a>
     <input type="submit" name="Continuer" value="Continuer">
     <input type="reset" name="Supprimer" value="Effacer">
 

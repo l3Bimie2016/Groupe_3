@@ -12,5 +12,17 @@
 </head>
 <body>
 <a href="/habitationWizard">Nouveau devis d'habitation</a>
+
+Nom devis :
+<center>
+    <table width="50%" border="1">
+        <c:forEach var="quote" items="${tupleDevisList}">
+            <tr>
+                <td><c:out value="${quote.name}"/></td>
+                <td><c:out value="${quote.id}"/></td>
+            </tr>
+        </c:forEach>
+    </table>
+</center>
 </body>
 </html>

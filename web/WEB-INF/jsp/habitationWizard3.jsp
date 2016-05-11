@@ -17,7 +17,7 @@
     Surface de la terrasse : <input type="number" name="surfaceTerrasse" value="0" required="required"/><br>
     Type de chauffage : <input type="text" name="typeChauffage" value="Gaz" required="required"/><br><br>
 
-    <a href="synthese"><input type="button" value="Sauvegarder"></a>
+    <a href="/"><input type="button" value="Quitter"></a>
     <input type="submit" name="Continuer" value="Continuer">
     <input type="reset" name="Supprimer" value="Effacer">
 
