@@ -28,44 +28,32 @@ public class DevisHabitationController {
 
     @RequestMapping("/habitationWizard")
     public ModelAndView habitationwWizard() {
-        return new ModelAndView("habitationWizard1","devisHabitation", new DevisHabitation());
+        return new ModelAndView("habitationWizard1", "devisHabitation", new DevisHabitation());
     }
 
     @RequestMapping("/habitationWizard{nbr}")
     public ModelAndView habitationwWizard(@PathVariable("nbr") int nbr, @ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
         devisHabitationService.setDevisHabitation(devisHabitation);
-        if (nbr == 4){
-        List<Tuple> listes = new ArrayList<>();
-            Field[] fields = DevisHabitation.class.getDeclaredFields();
-            for (Field f : fields){
-                try {
-                    f.setAccessible(true);
-                    if(f.getName().equals("prix") || f.getName().equals("formule1") || f.getName().equals("formule2")){
-                        System.out.println(f.getName());
-                    }else {
-                        listes.add(new Tuple(f.getName(), f.get(devisHabitation)));
-                    }
-                } catch (IllegalAccessException e) {
-                    e.printStackTrace();
-                }
-            }
-            return new ModelAndView("habitationWizard"+nbr, "resumes", listes);
-        }
+        return new ModelAndView("habitationWizard" + nbr);
+    }
 
-        return new ModelAndView("habitationWizard"+nbr);
+    @RequestMapping("/habitationWizard4")
+    public ModelAndView habitationwWizardEnd(@ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
+        devisHabitationService.setDevisHabitation(devisHabitation);
+        return new ModelAndView("habitationWizard4", "resumes", devisHabitationService.getResume(devisHabitation));
     }
 
     @RequestMapping("/habitationWizardSave")
-    public String habitationwWizardSave(@ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
+    public ModelAndView habitationwWizardSave(@ModelAttribute("devisHabitation") DevisHabitation devisHabitation) {
         String result = null;
-        result = devisHabitationService.sendDevisHabitationToVertX(devisHabitation);
+        result = devisHabitationService.setDevisHabitationToVertX(devisHabitation);
         String message = null;
-        if(result.equals("1")){
+        if (result.equals("1")) {
             devisHabitationService.deleteDevisHabitation(devisHabitation);
             message = "Ok";
-        }else {
+        } else {
             message = "Error";
         }
-        return "synthese";
+        return new ModelAndView("synthese");
     }
 }

@@ -1,5 +1,7 @@
 package fr.imie.groupe3.project.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 /**
@@ -10,6 +12,7 @@ public class DevisHabitation {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @JsonIgnore
     private Integer id;
     private String nom;
     private String prenom;
@@ -22,16 +25,15 @@ public class DevisHabitation {
     private Integer nombrePiece;
     private Integer etage;
     @Column(name="nombre_salle_bain")
-    private Integer nombreSalleDeBain;
+    private Integer nombreSalleBain;
     private Integer garage;
     @Column(name="surface_terrain")
     private Integer surfaceTerrain;
+    @Column(name="surface_terrasse")
     private Integer surfaceTerrasse;
-    @Column(name="surface_terasse")
     @Column(name="type_chauffage")
     private String typeChauffage;
-    private String formule1;
-    private String formule2;
+    private String formule;
     private Integer prix;
 
     public String getNom() {
@@ -90,12 +92,20 @@ public class DevisHabitation {
         this.etage = etage;
     }
 
-    public Integer getNombreSalleDeBain() {
-        return nombreSalleDeBain;
+    public Integer getId() {
+        return id;
     }
 
-    public void setNombreSalleDeBain(Integer nombreSalleDeBain) {
-        this.nombreSalleDeBain = nombreSalleDeBain;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getNombreSalleBain() {
+        return nombreSalleBain;
+    }
+
+    public void setNombreSalleBain(Integer nombreSalleBain) {
+        this.nombreSalleBain = nombreSalleBain;
     }
 
     public Integer getGarage() {
@@ -130,20 +140,12 @@ public class DevisHabitation {
         this.typeChauffage = typeChauffage;
     }
 
-    public String getFormule1() {
-        return formule1;
+    public String getFormule() {
+        return formule;
     }
 
-    public void setFormule1(String formule1) {
-        this.formule1 = formule1;
-    }
-
-    public String getFormule2() {
-        return formule2;
-    }
-
-    public void setFormule2(String formule2) {
-        this.formule2 = formule2;
+    public void setFormule(String formule) {
+        this.formule = formule;
     }
 
     public Integer getPrix() {

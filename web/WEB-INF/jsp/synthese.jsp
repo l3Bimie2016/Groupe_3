@@ -11,6 +11,6 @@
     <title>Synthese</title>
 </head>
 <body>
-<a href="/habitationWizard1">Nouveau devis d'habitation</a>
+<a href="/habitationWizard">Nouveau devis d'habitation</a>
 </body>
 </html>
