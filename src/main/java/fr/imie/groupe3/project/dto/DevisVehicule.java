@@ -1,14 +1,24 @@
 package fr.imie.groupe3.project.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * Created by Axel on 11/05/2016.
  */
+@Entity
 public class DevisVehicule {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @JsonIgnore
+    private Integer id;
     @JsonProperty("id_devis_vehicule")
     private Integer idDevisVehicule;
     private String nom;

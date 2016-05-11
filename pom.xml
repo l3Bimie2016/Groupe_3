@@ -65,6 +65,11 @@
             <artifactId>commons-collections</artifactId>
             <version>3.2.2</version>
         </dependency>
+        <dependency>
+            <groupId>fr.imie.groupe3.project</groupId>
+            <artifactId>fr.imie.groupe3.project</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

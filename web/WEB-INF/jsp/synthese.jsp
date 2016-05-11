@@ -12,7 +12,7 @@
 </head>
 <body>
 <a href="/habitationWizard">Nouveau devis d'habitation</a>
-
+<a href="/vehiculeWizard">Nouveau devis Voiture</a>
 Nom devis :
 <center>
     <table width="50%" border="1">

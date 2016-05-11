@@ -61,9 +61,7 @@ public class DevisHabitationService {
         for (Field f : fields) {
             try {
                 f.setAccessible(true);
-                if (f.getName().equals("prix") || f.getName().equals("formule1") || f.getName().equals("formule2")) {
-                    System.out.println(f.getName());
-                } else {
+                if (!f.getName().equals("prix") || !f.getName().equals("formule1") || !f.getName().equals("formule2")) {
                     listes.add(new TupleNameValue(f.getName(), f.get(devisHabitation)));
                 }
             } catch (IllegalAccessException e) {
