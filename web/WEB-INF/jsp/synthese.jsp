@@ -12,5 +12,6 @@
 </head>
 <body>
 <a href="/habitationWizard">Nouveau devis d'habitation</a>
+<a href="/vehiculeWizard">Nouveau devis Voiture</a>
 </body>
 </html>

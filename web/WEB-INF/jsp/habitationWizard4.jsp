@@ -29,8 +29,10 @@
         </table>
     </center>
 
-    <input type="radio" name="Formule" value=1 onClick="document.getElementById('Prix').value='42'" required> Formule 1<br>
-    <input type="radio" name="Formule" value=2 onClick="document.getElementById('Prix').value='10'" required> Formule 2<br>
+    <input type="radio" name="Formule" value=1 onClick="document.getElementById('Prix').value='42'" required> Tout
+    Risque <br>
+    <input type="radio" name="Formule" value=2 onClick="document.getElementById('Prix').value='101010'" required>
+    Au Tiers<br>
 
     Prix : <input type="text" name="Prix" id="Prix" readonly/><br><br>
 
