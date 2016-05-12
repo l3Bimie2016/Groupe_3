@@ -1,6 +1,8 @@
 package fr.imie.groupe3.project.dto;
 
 /**
+ * User Dto
+ *
  * Created by axel on 05/04/16.
  */
 public class User {

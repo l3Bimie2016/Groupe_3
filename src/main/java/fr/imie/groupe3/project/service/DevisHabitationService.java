@@ -17,6 +17,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Devis habitation service
+ *
  * Created by Axel on 10/05/2016.
  */
 @Service

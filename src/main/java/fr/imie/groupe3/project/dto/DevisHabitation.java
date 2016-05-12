@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 
 /**
+ * DevisHabitation entity
+ *
  * Created by Axel on 09/05/2016.
  */
 @Entity

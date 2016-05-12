@@ -1,6 +1,8 @@
 package fr.imie.groupe3.project.dto;
 
 /**
+ * Generic tuple
+ *
  * Created by le1cool on 10/05/16.
  */
 public class TupleNameValue {

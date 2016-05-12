@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import java.util.Date;
 
 /**
+ * Devis Vehicule entity
+ *
  * Created by Axel on 11/05/2016.
  */
 @Entity

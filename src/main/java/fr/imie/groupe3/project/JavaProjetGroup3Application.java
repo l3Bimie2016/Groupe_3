@@ -1,15 +1,15 @@
 package fr.imie.groupe3.project;
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.embedded.FilterRegistrationBean;
-import org.springframework.boot.context.web.ErrorPageFilter;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
+
+/**
+ * SpringBoot application main
+ */
 @SpringBootApplication
 @EnableAutoConfiguration
 @ComponentScan
@@ -21,9 +21,4 @@ public class JavaProjetGroup3Application extends SpringBootServletInitializer {
 
 
     }
-    /*
-    public static void main(String[] args) {
-        SpringApplication.run(JavaProjetGroup3Application.class);
-    }
-    */
 }

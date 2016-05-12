@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Devis vehicule service
+ *
  * Created by Axel on 10/05/2016.
  */
 @Service
